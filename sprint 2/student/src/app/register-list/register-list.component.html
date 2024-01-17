@@ -1,0 +1,40 @@
+
+<div></div>
+
+<h2>Register List</h2>
+<h3 text="center">Register List</h3>
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body"><div class="border">
+            <button class="btn btn-md btn-outline-primary">
+                <a href="register">Add </a></button>
+          </div></div>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr><th>Id</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let student of students">
+                    <td>{{ student.id}}</td>
+                    <td>{{ student.firstName }}</td>
+                    <td>{{ student.lastName}}</td>
+                    <td>{{ student.email }}</td>
+                    <td>{{ student.password }}</td>
+                    <td>{{ student.address}}</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">
+                          <i class="fa fa-edit"></i>Edit</button>
+                        <button class="btn btn-sm btn-danger">
+                          <i class="fa fa-remove"></i>Delete</button>
+                      </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>

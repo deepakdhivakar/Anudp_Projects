@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+
+</head>
+<body>
+
+  <form (ngSubmit)="Login()">
+    <label for="firstName">First Name:</label>
+    <input type="text"  [(ngModel)]="student.firstName" [ngModelOptions]="{standalone: true}"id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text"  [(ngModel)]="student.lastName" [ngModelOptions]="{standalone: true}" id="lastName" name="lastName" required>
+
+    <div class="field email">
+
+      <div class="input-area">Email
+        <input type="email"  [(ngModel)]="student.email" [ngModelOptions]="{standalone: true}" class="form-control" id="email"  placeholder="Enter Email">
+  
+        <i class="icon fas fa-envelope"></i>
+        <i class="error error-icon fas fa-exclamation-circle"></i>
+      </div>
+      <div class="error error-txt">Password</div>
+    </div>
+    <div class="field password">
+      <div class="form-group">
+      <div class="input-area">
+        <input type="password"  [(ngModel)]="student.password" [ngModelOptions]="{standalone: true}" class="form-control" id="password" class="form-control" placeholder="Enter Password">
+        <i class="icon fas fa-lock"></i>
+        <i class="error error-icon fas fa-exclamation-circle"></i>
+      </div><br>
+    <label for="Address">address</label>
+    <input type="address"  [(ngModel)]="student.address" [ngModelOptions]="{standalone: true}" id="address" name="Coursename" required>
+    </div>
+    <button type="submit" class="btn btn-primary" > SignUp</button>
+    &nbsp;&nbsp;<a href="login">Login</a> 
+    </div></form>
+
+</body>
+</html>

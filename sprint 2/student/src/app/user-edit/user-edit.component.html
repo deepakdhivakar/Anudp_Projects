@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course</title>
+
+</head>
+<body>
+
+  <form (ngSubmit)="courses()">
+    <h2>Course</h2>
+      
+    <label for="coursetype">CourseType</label>
+    <input type="address"  [(ngModel)]="course.courseType" [ngModelOptions]="{standalone: true}" id="coursetype" name="courseName" required>
+
+   
+   
+   <label for="name">Duration</label>
+   <input type="number"  [(ngModel)]="course.duration" [ngModelOptions]="{standalone: true}" id="Number" name="courseName" required>
+
+   
+   <button type="submit" class="btn btn-primary" > booking</button> 
+  </form>
+
+</body>
+</html>

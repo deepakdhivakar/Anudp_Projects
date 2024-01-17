@@ -1,0 +1,35 @@
+
+<div></div>
+<h2>Register List</h2>
+<h3 text="center">Course List</h3>
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body"><div class="border">
+            <button class="btn btn-md btn-outline-primary">
+              <a href="course">Add </a></button>
+          </div></div>
+          <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                  <th>CourseId</th>
+                  <th>CourseType</th>
+                  <th>Duration</th>
+                  <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let course of courseList">
+                  <td>{{ course.courseId }}</td>
+                  <td>{{ course.courseType}}</td>
+                  <td>{{ course.duration! }}</td>
+                 
+                  <td>
+                    <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="editCourse(course)">Edit</button>
+                    <button type="button" class="btn btn-outline-danger" (click)="deleteCourse(course)">Delete</button>
+                </td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+
+  </div>
